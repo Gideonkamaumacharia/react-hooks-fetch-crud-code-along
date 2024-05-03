@@ -4,7 +4,7 @@ function Item({ item, onUpdateItem, onDeleteItem }) {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then(() => onDeleteItem(item));
+      .then(item => onDeleteItem(item));
   }
 
   function handleAddToCartClick() {
